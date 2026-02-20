@@ -71,9 +71,9 @@ jobs:
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws_secret_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          session_token: ${{ secrets.AWS_SESSION_TOKEN }}
+          aws_session_token: ${{ secrets.AWS_SESSION_TOKEN }} 
           application_name: HogwartsAPI
           environment_name: HogwartsAPI-env
-          version_label: ${{ github.run_number }}
           region: us-east-1
+          version_label: ${{ github.run_number }}
           deployment_package: docker-compose.yml
